@@ -1,0 +1,16 @@
+{
+  "records": [
+    {
+      "ref": "account",
+      "object": "Account",
+      "fields": { "Name": "Verimind Sample Account", "Industry": "Technology", "Phone": "+91 00 0000 0001" },
+      "marker_field": "Description"
+    },
+    {
+      "ref": "contact",
+      "object": "Contact",
+      "fields": { "LastName": "Sample", "FirstName": "Verimind", "AccountId": "@account" },
+      "marker_field": "Description"
+    }
+  ]
+}

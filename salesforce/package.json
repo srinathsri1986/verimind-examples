@@ -1,0 +1,11 @@
+{
+  "name": "verimind-salesforce-example",
+  "private": true,
+  "description": "A sample Salesforce Lightning suite for Verimind: test data, sign-in, and the @verimind/salesforce helpers.",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.0"
+  }
+}
