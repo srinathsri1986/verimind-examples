@@ -21,5 +21,8 @@ test("the account's phone can be changed and saved", async ({ page }) => {
   await openRecord(page, record("account"), { mode: "edit" });
   await input(page, "Account.Phone").fill("+91 00 0000 0002");
   await page.getByRole("button", { name: "Save", exact: true }).click();
+  // Saved, Lightning shows the record again, on its first tab.
+  await expect(page.getByRole("heading", { name: "Verimind Sample Account", level: 1, exact: true })).toBeVisible();
+  await page.getByRole("tab", { name: "Details" }).click();
   await expect(field(page, "Account.Phone")).toContainText("+91 00 0000 0002");
 });
